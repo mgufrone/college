@@ -1,0 +1,29 @@
+/* 
+  Localizable.strings
+  College
+
+  Created by Moch Gufron on 5/29/16.
+  Copyright © 2016 Gufy. All rights reserved.
+*/
+"NOTES" = "Detail";
+"DATES" = "Schedule's date";
+"SUBJECT_PLACEHOLDER" = "The subject";
+"SUBJECT_TITLE" = "Subject";
+"ROOM_PLACEHOLDER" = "The room";
+"ROOM_TITLE" = "Room";
+"LECTURER_PLACEHOLDER" = "The lecturer";
+"LECTURER_TITLE" = "Lecturer";
+"DESCRIPTION_PLACEHOLDER" = "Make a detail of your subject";
+"DESCRIPTION_TITLE" = "Description";
+"DATE_TITLE" = "Date";
+"TIME_START_TITLE" = "Time start";
+"TIME_END_TITLE" = "Time end";
+"SCHEDULE_SAVED" = "Saved";
+"SCHEDULE_SAVED_MESSAGE" = "Schedule has been successfully saved";
+"UPDATE_SCHEDULE" = "Update current schedule";
+"NEW_SCHEDULE" = "New schedule";
+"NO_SCHEDULE" = "No schedule saved here";
+"DELETE_RECORD_TITLE" = "Are you sure?";
+"DELETE_RECORD_MESSAGE" = "Are you sure you want to delete this record?";
+"ACTION_EDIT" = "Edit";
+"ACTION_DELETE" = "Delete";
