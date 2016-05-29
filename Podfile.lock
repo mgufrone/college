@@ -1,0 +1,53 @@
+PODS:
+  - Alamofire (3.4.0)
+  - AMSmoothAlert (1.1):
+    - GPUImage
+  - Crashlytics (3.7.0):
+    - Fabric (~> 1.6.3)
+  - Eureka (1.6.0)
+  - Fabric (1.6.7)
+  - GPUImage (0.1.7)
+  - ReachabilitySwift (2.3.3)
+  - Realm (0.103.2):
+    - Realm/Headers (= 0.103.2)
+  - Realm/Headers (0.103.2)
+  - RealmSwift (0.103.2):
+    - Realm (= 0.103.2)
+  - RxRealm (0.1.4):
+    - RealmSwift (~> 0.100)
+    - RxSwift
+  - RxSwift (2.0.0)
+  - SVProgressHUD (2.0.3)
+  - Validator (1.1.2)
+
+DEPENDENCIES:
+  - Alamofire
+  - AMSmoothAlert (~> 1.0)
+  - Crashlytics
+  - Eureka
+  - Fabric
+  - ReachabilitySwift
+  - RealmSwift
+  - RxRealm
+  - RxSwift (~> 2.0.0)
+  - SVProgressHUD
+  - Validator
+
+SPEC CHECKSUMS:
+  Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
+  AMSmoothAlert: 108cf0fc3eea9256ccfdcd9deaa283999ac1e47e
+  Crashlytics: c3a2333dea9e2733d2777f730910321fc9e25c0d
+  Eureka: ef5b9ac93aedeecfe50d98b1ac7678bf09a1fc62
+  Fabric: caf7580c725e64db144f610ac65cd60956911dc7
+  GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
+  ReachabilitySwift: e0f6b6f280effb47731acfaaa2d5ffe223703793
+  Realm: 448f0416079fe5b0ed947e7d86f3c4e1c75826cb
+  RealmSwift: 8a45cc8f02dfac093b72a3b5a01d567e27e15891
+  RxRealm: aee2585d973eb00554ca1691e12cfa8248c4616f
+  RxSwift: d83246efa6f16c50c143bec134649d045498f601
+  SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
+  Validator: 3fa8a561459004f4629a698258ee365fc0b82406
+
+PODFILE CHECKSUM: d1679262e241f37281e28de16fb4238a7f1d8676
+
+COCOAPODS: 1.0.0
