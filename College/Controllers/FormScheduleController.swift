@@ -53,8 +53,8 @@ class FormScheduleController: FormViewController{
             }
             <<< TextAreaRow(Tags.Description) { row in
             row.placeholder = "DESCRIPTION_PLACEHOLDER".localize
-                row.placeholder = "LECTURER_PLACEHOLDER".localize
-                row.title = "LECTURER_TITLE".localize
+                row.placeholder = "DESCRIPTION_PLACEHOLDER".localize
+                row.title = "DESCRIPTION_TITLE".localize
                 if checkSchedule(){
                     row.value = schedule?._description
                 }

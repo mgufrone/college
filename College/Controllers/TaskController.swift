@@ -1,30 +1,28 @@
 //
-//  ScheduleController.swift
+//  TaskController.swift
 //  College
 //
-//  Created by Moch Gufron on 5/28/16.
+//  Created by Moch Gufron on 5/29/16.
 //  Copyright © 2016 Gufy. All rights reserved.
 //
 
 import Foundation
 import RealmSwift
-import RxSwift
-import RxRealm
-import UIKit
 import AMSmoothAlert
 
-class ScheduleController: UITableViewController {
-    var data: SectionedSchedule?
+class TaskController: UITableViewController{
+    var data: SectionedTask?
     override func viewDidLoad() {
         super.viewDidLoad()
         self.loadData()
     }
+    
     func loadData(){
-        Schedule.sections(true) { data in
+        Task.sections(true) { data in
             self.data = data
             if self.data?.count == 0{
                 let messageLabel = UILabel(frame: CGRectMake(0,0,self.view.bounds.size.width,self.view.bounds.size.height))
-                messageLabel.text = "NO_SCHEDULE".localize
+                messageLabel.text = "NO_TASKS".localize
                 messageLabel.textColor = UIColor.blackColor()
                 messageLabel.numberOfLines = 0
                 messageLabel.textAlignment = .Center
@@ -33,6 +31,7 @@ class ScheduleController: UITableViewController {
             }
         }
     }
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return (data?.count)!
     }
@@ -41,7 +40,7 @@ class ScheduleController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(ScheduleCell.className) as! ScheduleCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(TaskCell.className) as! TaskCell
         let row = self.data![indexPath.section].1[indexPath.row]
         cell.setup(row)
         return cell
@@ -55,13 +54,13 @@ class ScheduleController: UITableViewController {
     override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
         var results: [UITableViewRowAction] = []
         results.append(UITableViewRowAction(style: UITableViewRowActionStyle.Normal, title: "ACTION_EDIT".localize){ row, _ in
-            self.performSegueWithIdentifier(FormScheduleController.className, sender: self.data![indexPath.section].1[indexPath.row])
+            self.performSegueWithIdentifier(FormTaskController.className, sender: self.data![indexPath.section].1[indexPath.row])
             })
         results.append(UITableViewRowAction(style: UITableViewRowActionStyle.Default, title: "ACTION_DELETE".localize){ row, _ in
             let alert = AMSmoothAlertView(fadeAlertWithTitle: "DELETE_RECORD_TITLE".localize, andText: "DELETE_RECORD_MESSAGE".localize, andCancelButton: true, forAlertType: AlertType.Failure)
             alert.completionBlock = { alertObj, button in
                 if button == alertObj.defaultButton{
-                    let record: Schedule = self.data![indexPath.section].1[indexPath.row]
+                    let record: Task = self.data![indexPath.section].1[indexPath.row]
                     Realm.write { realm in
                         realm.delete(record)
                         self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
@@ -78,19 +77,20 @@ class ScheduleController: UITableViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let destination = segue.destinationViewController
-        if segue.identifier == FormScheduleController.className{
-            let mc = destination as! FormScheduleController
-            mc.schedule = sender as? Schedule
+        let mc = segue.destinationViewController
+        if segue.identifier == FormTaskController.className{
+            let controller = mc as! FormTaskController
+            controller.task = sender as? Task
         }
     }
     
     @IBAction func createNew(sender: UIBarButtonItem) {
-        self.performSegueWithIdentifier(FormScheduleController.className, sender: nil)
+        self.performSegueWithIdentifier(FormTaskController.className, sender: nil)
     }
     
-    @IBAction func unwindToSchedule(segue: UIStoryboardSegue){
+    @IBAction func unwindToTask(segue: UIStoryboardSegue){
         self.loadData()
         self.tableView.reloadData()
     }
+    
 }

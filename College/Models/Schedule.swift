@@ -55,6 +55,13 @@ class Schedule: Object {
             callback(results: results)
         }
     }
+    static func all() -> Results<Schedule>{
+        let realm = try! Realm()
+        return realm.objects(self)
+    }
+    static func count() -> Int{
+        return self.all().count
+    }
 // Specify properties to ignore (Realm won't persist these)
     
 //  override static func ignoredProperties() -> [String] {

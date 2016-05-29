@@ -10,6 +10,10 @@
 		0FC75C4342A305113863B840 /* Pods_College.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D6F9EBEFDC845FED113405F /* Pods_College.framework */; };
 		780534E91CFA5F5F009AB64A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 780534E81CFA5F5F009AB64A /* Localizable.strings */; };
 		780534EB1CFAF1A3009AB64A /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780534EA1CFAF1A3009AB64A /* Object.swift */; };
+		780534ED1CFAFC4E009AB64A /* TaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780534EC1CFAFC4E009AB64A /* TaskController.swift */; };
+		780534EF1CFAFCC6009AB64A /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780534EE1CFAFCC6009AB64A /* TaskCell.swift */; };
+		780534F11CFAFE5B009AB64A /* FormTaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780534F01CFAFE5B009AB64A /* FormTaskController.swift */; };
+		780534F31CFB0129009AB64A /* TaskValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780534F21CFB0129009AB64A /* TaskValidator.swift */; };
 		78223DE31CF7E7EA00D1FABA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78223DE21CF7E7EA00D1FABA /* AppDelegate.swift */; };
 		78223DE51CF7E7EA00D1FABA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78223DE41CF7E7EA00D1FABA /* ViewController.swift */; };
 		78223DE81CF7E7EA00D1FABA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78223DE61CF7E7EA00D1FABA /* Main.storyboard */; };
@@ -34,6 +38,10 @@
 		6D6F9EBEFDC845FED113405F /* Pods_College.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_College.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		780534E81CFA5F5F009AB64A /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		780534EA1CFAF1A3009AB64A /* Object.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
+		780534EC1CFAFC4E009AB64A /* TaskController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskController.swift; sourceTree = "<group>"; };
+		780534EE1CFAFCC6009AB64A /* TaskCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
+		780534F01CFAFE5B009AB64A /* FormTaskController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormTaskController.swift; sourceTree = "<group>"; };
+		780534F21CFB0129009AB64A /* TaskValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskValidator.swift; sourceTree = "<group>"; };
 		78223DDF1CF7E7EA00D1FABA /* College.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = College.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78223DE21CF7E7EA00D1FABA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78223DE41CF7E7EA00D1FABA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +126,8 @@
 			children = (
 				78E4CCAB1CF8D16200814DDF /* ScheduleController.swift */,
 				788D52F21CF94D000016AA0A /* FormScheduleController.swift */,
+				780534EC1CFAFC4E009AB64A /* TaskController.swift */,
+				780534F01CFAFE5B009AB64A /* FormTaskController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -157,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				788D52E21CF901590016AA0A /* ScheduleCell.swift */,
+				780534EE1CFAFCC6009AB64A /* TaskCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -165,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				78BF7FB91CF9857500D80502 /* ScheduleValidator.swift */,
+				780534F21CFB0129009AB64A /* TaskValidator.swift */,
 			);
 			path = Validators;
 			sourceTree = "<group>";
@@ -318,11 +330,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				788D52F31CF94D000016AA0A /* FormScheduleController.swift in Sources */,
+				780534F31CFB0129009AB64A /* TaskValidator.swift in Sources */,
+				780534EF1CFAFCC6009AB64A /* TaskCell.swift in Sources */,
 				78BF7FBA1CF9857500D80502 /* ScheduleValidator.swift in Sources */,
 				788D52E71CF936AA0016AA0A /* Schedule.swift in Sources */,
 				788D52F11CF94C650016AA0A /* String.swift in Sources */,
 				78E4CCAC1CF8D16200814DDF /* ScheduleController.swift in Sources */,
 				78223DE51CF7E7EA00D1FABA /* ViewController.swift in Sources */,
+				780534ED1CFAFC4E009AB64A /* TaskController.swift in Sources */,
+				780534F11CFAFE5B009AB64A /* FormTaskController.swift in Sources */,
 				788D52E31CF901590016AA0A /* ScheduleCell.swift in Sources */,
 				788D52E51CF9364F0016AA0A /* Migration.swift in Sources */,
 				788D52E91CF9393D0016AA0A /* Task.swift in Sources */,

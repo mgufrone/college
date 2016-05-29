@@ -10,11 +10,4 @@ import Foundation
 import RealmSwift
 
 extension Object{
-    static func all<T: Object>() -> Results<T>{
-        let realm = try! Realm()
-        return realm.objects(T)
-    }
-    static func count() -> Int{
-        return self.all().count
-    }
 }
