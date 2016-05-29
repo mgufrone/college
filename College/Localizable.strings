@@ -27,8 +27,8 @@
 "DELETE_RECORD_MESSAGE" = "Are you sure you want to delete this record?";
 "ACTION_EDIT" = "Edit";
 "ACTION_DELETE" = "Delete";
-"UPDATE_SCHEDULE" = "Update current task";
-"NEW_SCHEDULE" = "New task";
-"NO_SCHEDULE" = "No saved tasks here";
+"UPDATE_TASK" = "Update current task";
+"NEW_TASK" = "New task";
+"NO_TASKS" = "No saved tasks here";
 "TASK_SAVED" = "Saved";
 "TASK_SAVED_MESSAGE" = "Task has been successfully saved";

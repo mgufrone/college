@@ -12,12 +12,22 @@ import RxSwift
 import RxRealm
 import UIKit
 import AMSmoothAlert
+import SVPullToRefresh
 
 class ScheduleController: UITableViewController {
     var data: SectionedSchedule?
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.loadData()
+        self.tableView.addPullToRefreshWithActionHandler {
+            self.loadData()
+            self.tableView.reloadData()
+            self.tableView.pullToRefreshView.stopAnimating()
+        }
+        self.tableView.triggerPullToRefresh()
+    }
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(true)
+        self.tableView.triggerPullToRefresh()
     }
     func loadData(){
         Schedule.sections(true) { data in

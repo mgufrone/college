@@ -9,12 +9,24 @@
 import Foundation
 import RealmSwift
 import AMSmoothAlert
+import SVPullToRefresh
 
 class TaskController: UITableViewController{
     var data: SectionedTask?
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.loadData()
+        self.tableView.addPullToRefreshWithActionHandler {
+            
+            self.loadData()
+            self.tableView.reloadData()
+            self.tableView.pullToRefreshView.stopAnimating()
+        }
+        self.tableView.triggerPullToRefresh()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(true)
+        self.tableView.triggerPullToRefresh()
     }
     
     func loadData(){

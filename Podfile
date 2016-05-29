@@ -17,5 +17,6 @@ target 'College' do
   pod 'Fabric'
   pod 'Crashlytics'
   pod 'AMSmoothAlert', '~> 1.0'
+  pod 'SVPullToRefresh'
   # pod 'Siren'
 end

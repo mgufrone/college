@@ -18,6 +18,7 @@ PODS:
     - RxSwift
   - RxSwift (2.0.0)
   - SVProgressHUD (2.0.3)
+  - SVPullToRefresh (0.4.1)
   - Validator (1.1.2)
 
 DEPENDENCIES:
@@ -31,6 +32,7 @@ DEPENDENCIES:
   - RxRealm
   - RxSwift (~> 2.0.0)
   - SVProgressHUD
+  - SVPullToRefresh
   - Validator
 
 SPEC CHECKSUMS:
@@ -46,8 +48,9 @@ SPEC CHECKSUMS:
   RxRealm: aee2585d973eb00554ca1691e12cfa8248c4616f
   RxSwift: d83246efa6f16c50c143bec134649d045498f601
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
+  SVPullToRefresh: ba2e718695a43253d8bea6852d2960097dc15d8c
   Validator: 3fa8a561459004f4629a698258ee365fc0b82406
 
-PODFILE CHECKSUM: d1679262e241f37281e28de16fb4238a7f1d8676
+PODFILE CHECKSUM: 9a1306703aad3e5cae8b91009e45ccb30ee2c714
 
 COCOAPODS: 1.0.0
